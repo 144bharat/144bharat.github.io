@@ -186,9 +186,13 @@ section .title::after {
 /* home section styling */
 /* bgc considered */
 /* https://images.pexels.com/photos/168766/pexels-photo-168766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 */
+
+
+
 .home {
   display: flex;
-  background: url("images/stack.jpg") no-repeat center;
+  background: url("images/two.gif") no-repeat center;
+  /* background: url("images/two.gif") no-repeat center; */
   background-color: #111;
   height: 100vh;
   color: #fff;
@@ -364,10 +368,73 @@ background-size: 10px 10px;
 }
 
 /* skills section styling */
-.skills-images img {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-  box-sizing: border-box;
+
+
+.flip-box {
+  background-color: transparent;
+  width: 250px;
   height: 150px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  /* background-color: #bbb; */
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.skillcards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  margin-left:100px;
+}
+
+.skillcard{
+  margin-top:20px;
+}
+
+@media (min-width: 600px) {
+  .skillcards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .skillcards { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+.skills-images img {
+  box-sizing: border-box;
+  height: 250px;
   width: 150px;
   /* object-fit: cover; */
   border-radius: 5%;
@@ -378,23 +445,31 @@ background-size: 10px 10px;
   margin-top: 20px;
   height: 100px;
   width: 130px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 }
 #aws_img img{
   height: 100px;
   width: 120px;
   margin-top: 35px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 }
 
 #js_img img{
   margin-top: 20px;
   height: 105px;
   width: 130px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 }
 
 #java_img img{
   margin-top: 30px;
   height: 80px;
   width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 }
 
 
@@ -403,16 +478,22 @@ background-size: 10px 10px;
   margin:auto;
   /* height: 255px; */
   width: 180px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 
 }
 
 #hibernate_img{
   
   size:300px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 }
 
 #github_img{
   height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding:20px;
 }
 .skills .title::after {
   content: "What I Know";

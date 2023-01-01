@@ -76,17 +76,17 @@ $(document).ready(function () {
 
 // Resume Button Downloadable id is resume_button
 
-document.getElementById("resume_button_1").addEventListener("click", ()=>{
+// document.getElementById("resume_button_1").addEventListener("click", ()=>{
 
-  window.open("https://drive.google.com/file/d/1sZqTWfFo2LjEf4PRE58ivxCE-zCi2yvw/view?usp=sharing","_blank");
+  // window.open("https://drive.google.com/file/d/121uHNS3oQrfZSmhuIxDuUHys1His65P8/view?usp=sharing","_blank");
 
-})
+// })
 
-document.getElementById("resume_button_2").addEventListener("click", ()=>{
+// document.getElementById("resume_button_2").addEventListener("click", ()=>{
 
-  window.open("https://drive.google.com/file/d/1sZqTWfFo2LjEf4PRE58ivxCE-zCi2yvw/view?usp=sharing","_blank");
+  // window.open("https://drive.google.com/file/d/121uHNS3oQrfZSmhuIxDuUHys1His65P8/view?usp=sharing","_blank");
 
-})
+// })
 
 
 //Github Calendar flow
