@@ -371,9 +371,13 @@ p+p {
     color: var(--b);
     display: inline-block;
     margin-top: 16px;
-    font-weight: 600
+    font-weight: 600;
+    padding-right:16px;
 }
 
+.more:hover {
+color:var(--a);
+}
 .contact-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;

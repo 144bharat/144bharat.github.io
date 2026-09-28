@@ -79,7 +79,7 @@ export function Hero() {
         <a className="btn primary" href="#projects">
           View Work
         </a>
-        <a className="btn" href={profile.resume}>
+        <a className="btn" href="/BHARAT_REACT_RESUME.pdf" download="Bharat_Resume_FullStackDeveloper.pdf">
           Resume
         </a>
       </motion.div>
@@ -220,8 +220,11 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <Link className="more" to={`/projects/${p.id}`}>
-                View case study →
+              <Link className="more" to={p.links[0]}>
+                View Live Demo →
+              </Link>
+              <Link className="more" to={p.links[1]}>
+                View Source Code →
               </Link>
             </motion.div>
           </Reveal>

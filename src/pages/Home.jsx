@@ -9,7 +9,7 @@ import {
   Contact,
 } from "../components/Sections";
 
-Home = () => {
+const Home = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -36,3 +36,5 @@ Home = () => {
     </main>
   );
 };
+
+export default Home;
